@@ -11,6 +11,9 @@ function App() {
   useEffect(() => {
     const getPhotos = async () => {
       const lastWeek = moment().subtract(7, 'days').format('YYYY-MM-DD');
+
+      // I know you wouldn't normally put the API key anywhere that would be publicly accessible, but I only found out that I needed to complete this assessment about 6 hours before the deadline to apply, so I only put it in here for the assessment.
+
       const data = await fetch(
         `https://api.nasa.gov/planetary/apod?start_date=${lastWeek}&api_key=UeXaTew173Cfq0EDPllzOSgDX2chcDq81BYf6e6c`
       )
